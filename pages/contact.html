@@ -3,119 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Enroll | American Star Driving School</title>
-  <meta name="description" content="Contact American Star Driving School to schedule driving lessons, enroll in the 5-hour pre-licensing course, or ask any questions. Serving New Jersey.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <title>Contact | American Star Driving School</title>
+  <meta name="description" content="Get in touch with American Star Driving School. Call (732) 783-1750 or fill out our contact form to enroll or ask questions.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
   <div id="site-nav"></div>
 
-  <header class="page-hero">
-    <h1>Contact &amp; Enroll</h1>
-    <p>Ready to get started? Reach out and we'll get you scheduled.</p>
-  </header>
+  <div class="page-hero">
+    <h1>Contact Us</h1>
+    <p>Ready to enroll or have questions? Reach out — we'd love to hear from you.</p>
+  </div>
 
-  <main>
-
-    <section style="background: var(--bg-light); padding: 5rem 2rem;">
+  <section>
+    <div class="container">
       <div class="contact-layout">
 
-        <div class="contact-info">
-          <h2>Get in Touch</h2>
-          <p>Fill out the form and we'll be in touch within one business day to confirm your enrollment and schedule your first lesson.</p>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📞</div>
-            <div class="contact-detail-text">
-              <strong>Phone</strong>
-              <span><a href="tel:+1XXXXXXXXXX" style="color: var(--muted-text);">(XXX) XXX-XXXX</a></span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✉️</div>
-            <div class="contact-detail-text">
-              <strong>Email</strong>
-              <span><a href="mailto:info@americanstardriving.com" style="color: var(--muted-text);">info@americanstardriving.com</a></span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📍</div>
-            <div class="contact-detail-text">
-              <strong>Service Area</strong>
-              <span>New Jersey — [Your City / County]</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">🕐</div>
-            <div class="contact-detail-text">
-              <strong>Hours</strong>
-              <span>Mon–Sat: 8am – 7pm<br>Sun: 9am – 4pm</span>
-            </div>
-          </div>
-        </div>
-
+        <!-- FORM -->
         <div class="contact-form-wrap">
-          <h3>Enrollment &amp; Inquiry Form</h3>
-          <form action="thank-you.html" method="GET">
+          <h2>Send Us a Message</h2>
+          <!--
+            SETUP: Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID.
+            1. Go to https://formspree.io and sign up (free)
+            2. Create a new form — set the email to AmericanstarDS@gmail.com
+            3. Copy your form ID (looks like: xpwzabcd)
+            4. Replace YOUR_FORMSPREE_ID in the action URL below
+          -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
             <div class="form-row">
               <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="John">
               </div>
               <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
               </div>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
-            </div>
-            <div class="form-group">
-              <label for="service">I'm Interested In</label>
-              <select id="service" name="service" required>
-                <option value="" disabled selected>Select a service…</option>
-                <option value="behind-wheel">Behind-the-Wheel Lessons</option>
-                <option value="5-hour">5-Hour Pre-Licensing Course</option>
-                <option value="road-test-prep">Road Test Preparation</option>
-                <option value="adult-refresher">Adult Refresher Lessons</option>
-                <option value="teen-package">Teen Driver Package</option>
-                <option value="unsure">Not Sure – Help Me Choose</option>
+              <label for="service">Interested In</label>
+              <select id="service" name="service">
+                <option value="">-- Select a package --</option>
+                <option value="Bronze Package ($300)">Bronze Package ($300)</option>
+                <option value="Silver Package ($500)">Silver Package ($500)</option>
+                <option value="Gold Package ($700)">Gold Package ($700)</option>
+                <option value="2-Hour Lesson ($130)">2-Hour Lesson ($130)</option>
+                <option value="Road Test ($130)">Road Test ($130)</option>
+                <option value="Road Test + Prep ($170)">Road Test + Preparation ($170)</option>
+                <option value="Teen Special ($380)">Teen Special ($380)</option>
+                <option value="Other / Question">Other / Question</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="experience">Current Experience Level</label>
-              <select id="experience" name="experience">
-                <option value="" disabled selected>Select…</option>
-                <option value="none">Complete Beginner (no experience)</option>
-                <option value="permit">Have Permit, Just Starting</option>
-                <option value="some">Some Experience, Need More Practice</option>
-                <option value="refresh">Licensed, Want a Refresher</option>
-              </select>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell us about yourself, your location, preferred schedule, or any questions you have..."></textarea>
             </div>
-            <div class="form-group">
-              <label for="message">Anything Else We Should Know?</label>
-              <textarea id="message" name="message" placeholder="Questions, preferred days/times, special needs, etc."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Send My Inquiry &#8594;</button>
+            <button type="submit" class="btn-submit">Send Message</button>
+            <div class="success-msg" id="successMsg">✅ Thanks for reaching out! We'll get back to you soon.</div>
           </form>
         </div>
 
-      </div>
-    </section>
+        <!-- INFO -->
+        <div class="contact-info-wrap">
+          <h2>Get in Touch Directly</h2>
 
-  </main>
+          <div class="contact-detail">
+            <div class="icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:7327831750">(732) 783-1750</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:AmericanstarDS@gmail.com?subject=I would like to take driving lessons!">AmericanstarDS@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>New Brunswick, NJ, USA</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top:32px;">Opening Hours</h2>
+          <table class="hours-table">
+            <tr><td>Monday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Tuesday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Wednesday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Thursday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Friday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>10:00 am – 4:00 pm</td></tr>
+            <tr><td>Sunday</td><td>10:00 am – 4:00 pm</td></tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <div id="site-footer"></div>
+
   <script src="../js/main.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          successMsg.style.display = 'block';
+          btn.textContent = 'Sent!';
+        } else {
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+          alert('Something went wrong. Please email us directly at AmericanstarDS@gmail.com');
+        }
+      } catch {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Network error. Please email us directly at AmericanstarDS@gmail.com');
+      }
+    });
+  </script>
 </body>
 </html>
