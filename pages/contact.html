@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Enroll | American Star Driving School</title>
+  <meta name="description" content="Contact American Star Driving School to schedule driving lessons, enroll in the 5-hour pre-licensing course, or ask any questions. Serving New Jersey.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <div id="site-nav"></div>
+
+  <header class="page-hero">
+    <h1>Contact &amp; Enroll</h1>
+    <p>Ready to get started? Reach out and we'll get you scheduled.</p>
+  </header>
+
+  <main>
+
+    <section style="background: var(--bg-light); padding: 5rem 2rem;">
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Fill out the form and we'll be in touch within one business day to confirm your enrollment and schedule your first lesson.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <span><a href="tel:+1XXXXXXXXXX" style="color: var(--muted-text);">(XXX) XXX-XXXX</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span><a href="mailto:info@americanstardriving.com" style="color: var(--muted-text);">info@americanstardriving.com</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Service Area</strong>
+              <span>New Jersey — [Your City / County]</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <strong>Hours</strong>
+              <span>Mon–Sat: 8am – 7pm<br>Sun: 9am – 4pm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Enrollment &amp; Inquiry Form</h3>
+          <form action="thank-you.html" method="GET">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
+            </div>
+            <div class="form-group">
+              <label for="service">I'm Interested In</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="behind-wheel">Behind-the-Wheel Lessons</option>
+                <option value="5-hour">5-Hour Pre-Licensing Course</option>
+                <option value="road-test-prep">Road Test Preparation</option>
+                <option value="adult-refresher">Adult Refresher Lessons</option>
+                <option value="teen-package">Teen Driver Package</option>
+                <option value="unsure">Not Sure – Help Me Choose</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience">Current Experience Level</label>
+              <select id="experience" name="experience">
+                <option value="" disabled selected>Select…</option>
+                <option value="none">Complete Beginner (no experience)</option>
+                <option value="permit">Have Permit, Just Starting</option>
+                <option value="some">Some Experience, Need More Practice</option>
+                <option value="refresh">Licensed, Want a Refresher</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything Else We Should Know?</label>
+              <textarea id="message" name="message" placeholder="Questions, preferred days/times, special needs, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send My Inquiry &#8594;</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
